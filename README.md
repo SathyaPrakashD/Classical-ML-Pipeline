@@ -89,10 +89,10 @@ Running the notebook produces a `classification_report` showing:
 ## 🗺️ What's Next
 
 This exercise is a stepping stone toward:
-- Custom preprocessors (MadeWithML `CustomPreprocessor`)
+- Custom preprocessors ( `CustomPreprocessor`)
 - Multi-column preprocessing with `ColumnTransformer`
 - Text classification pipelines with `TfidfVectorizer`
-- Production ML with Ray / Anyscale (MadeWithML training module)
+- Production ML with Ray / Anyscale 
 
 ---
 
