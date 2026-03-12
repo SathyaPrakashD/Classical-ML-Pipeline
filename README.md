@@ -1,4 +1,4 @@
-# Classical ML Pipeline — Iris Species Classifier
+# Classical ML Pipeline —
 
 A beginner-to-production sklearn workflow built as a hands-on exercise to consolidate core scikit-learn concepts:
 preprocessing, pipelines, model training, and evaluation.
