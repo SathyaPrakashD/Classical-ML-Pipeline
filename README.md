@@ -186,33 +186,33 @@ Each round introduces a new dataset and a new challenge — progressively buildi
 
                                   > A `Pipeline` chains preprocessing and model training into one deployable object. `fit()` on training data. `predict()` on test data. The pipeline handles the rest.
                                   >
-                                  > > Scale **after** splitting — never before. Scaling before the split leaks test statistics into training. This is one of the most common sources of data leakage in ML pipelines.
-                                  > >
-                                  > > > Simpler models can outperform complex ones on small, clean datasets. Logistic Regression consistently matched or beat Random Forest across these exercises.
-                                  > > >
-                                  > > > > The right metric is decided by the **cost of being wrong** — not by convention.
-                                  > > > >
-                                  > > > > ---
-                                  > > > >
-                                  > > > > ## 🗺️ What's Next
-                                  > > > >
-                                  > > > > This exercise is a stepping stone toward:
-                                  > > > > - Custom preprocessors (`CustomPreprocessor`)
-                                  > > > > - - Multi-column preprocessing with `ColumnTransformer`
-                                  > > > >   - - Text classification pipelines with `TfidfVectorizer`
-                                  > > > >     - - SciBERT fine-tuning for NLP classification
-                                  > > > >       - - Production ML with Ray / Anyscale
-                                  > > > >        
-                                  > > > >         - ---
-                                  > > > >
-                                  > > > > ## 👤 Author
-                                  > > > >
-                                  > > > > **Sathya Prakash** · [LinkedIn](https://www.linkedin.com/in/sathyaprakashd)
-                                  > > > >
-                                  > > > > Built as part of the **BITS Pilani Digital AI Engineering & MLOps Program** learning path.
-                                  > > > >
-                                  > > > > ---
-                                  > > > >
-                                  > > > > ## 📄 License
-                                  > > > >
-                                  > > > > This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+                                  >  Scale **after** splitting — never before. Scaling before the split leaks test statistics into training. This is one of the most common sources of data leakage in ML pipelines.
+                                  > 
+                                  >  Simpler models can outperform complex ones on small, clean datasets. Logistic Regression consistently matched or beat Random Forest across these exercises.
+                                  > 
+                                  > The right metric is decided by the **cost of being wrong** — not by convention.
+                                  > 
+                                  > ---
+                                  > 
+                                  > ## 🗺️ What's Next
+                                  > 
+                                  > This exercise is a stepping stone toward:
+                                  > - Custom preprocessors (`CustomPreprocessor`)
+                                  > - - Multi-column preprocessing with `ColumnTransformer`
+                                  > - - Text classification pipelines with `TfidfVectorizer`
+                                  > - - SciBERT fine-tuning for NLP classification
+                                  > - - Production ML with Ray / Anyscale
+                                  >         
+                                  > - ---
+                                  > 
+                                  > ## 👤 Author
+                                  > 
+                                  > **Sathya Prakash** · [LinkedIn](https://www.linkedin.com/in/sathyaprakashd)
+                                  > 
+                                  > Built as part of the **BITS Pilani Digital AI Engineering & MLOps Program** learning path.
+                                  > 
+                                  > ---
+                                  > 
+                                  > ## 📄 License
+                                  > 
+                                  > This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
