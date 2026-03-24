@@ -1,4 +1,6 @@
-# Classical ML Pipeline — Sklearn Workout
+# ml-pipeline-fundamentals
+
+
 
 A beginner-to-production sklearn workflow built as a hands-on exercise to consolidate core scikit-learn concepts:
 preprocessing, pipelines, model training, evaluation, and metric reasoning.
