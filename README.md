@@ -66,212 +66,214 @@ Each round introduces a new dataset and a new challenge — progressively buildi
 **Dataset:** `sklearn.datasets.load_breast_cancer`
 
 - Binary classification (malignant vs benign)
-- - 569 samples, 30 features
-  - - First end-to-end pipeline: split → scale → train → evaluate
-    - - **New concept:** Pipeline, StandardScaler, classification_report
-     
-      - ---
+- 569 samples, 30 features
+- First end-to-end pipeline: split → scale → train → evaluate
+- **New concept:** Pipeline, StandardScaler, classification_report
 
-      ### Round 2 — Iris (Full Independence)
+---
 
-      [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/02_iris_classification.ipynb)
+### Round 2 — Iris (Full Independence)
 
-      **Dataset:** `sklearn.datasets.load_iris`
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/02_iris_classification.ipynb)
 
-      - Multi-class classification (3 flower species)
-      - - 150 samples, 4 features
-        - - Built independently end-to-end
-         
-          - ---
+**Dataset:** `sklearn.datasets.load_iris`
 
-          ### Round 3 — sklearn Core Workout (LabelEncoder + Feature Importance)
+- Multi-class classification (3 flower species)
+- 150 samples, 4 features
+- Built independently end-to-end
 
-          [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/03_sklearn_core_workout.ipynb)
+---
 
-          **Dataset:** `sklearn.datasets.load_wine`
+### Round 3 — sklearn Core Workout (LabelEncoder + Feature Importance)
 
-          - **New concepts:** LabelEncoder for output labels, feature importance from Random Forest
-          - - Key learning: LabelEncoder for target labels; OneHotEncoder for input features
-           
-            - ---
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/03_sklearn_core_workout.ipynb)
 
-            ### Round 4 — Digits (Full Independence)
+**Dataset:** `sklearn.datasets.load_wine`
 
-            [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/04_digits_recognition.ipynb)
+- **New concepts:** LabelEncoder for output labels, feature importance from Random Forest
+- Key learning: LabelEncoder for target labels; OneHotEncoder for input features
 
-            **Dataset:** `sklearn.datasets.load_digits`
+---
 
-            - Handwritten digit recognition (0–9)
-            - - 1797 samples, 64 features (8×8 pixel images)
-              - - Built entirely without guidance
-                - - **New concept:** Image-as-features (pixel arrays), 10-class classification
-                 
-                  - ---
+### Round 4 — Digits (Full Independence)
 
-                  ### Round 5 — Wine Quality (Imbalanced Classes)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/04_digits_recognition.ipynb)
 
-                  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/05_wine_quality_imbalanced.ipynb)
+**Dataset:** `sklearn.datasets.load_digits`
 
-                  **Dataset:** Wine Quality (CSV) — multi-class quality scores
+- Handwritten digit recognition (0–9)
+- 1797 samples, 64 features (8×8 pixel images)
+- Built entirely without guidance
+- **New concept:** Image-as-features (pixel arrays), 10-class classification
 
-                  - Real-world imbalanced dataset
-                  - - **New concept:** `class_weight='balanced'` to handle skewed class distribution
-                    - - Key learning: weighted vs macro F1; when imbalance changes your metric strategy
-                     
-                      - ---
+---
 
-                      ### Round 6 — Olivetti Faces (Face Recognition)
+### Round 5 — Wine Quality (Imbalanced Classes)
 
-                      [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/06_olivetti_faces_recognition.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/05_wine_quality_imbalanced.ipynb)
 
-                      **Dataset:** `sklearn.datasets.fetch_olivetti_faces`
+**Dataset:** Wine Quality (CSV) — multi-class quality scores
 
-                      - 400 grayscale face images, 40 people (10 images each)
-                      - - 4096 features per image (64×64 pixels, flattened)
-                        - - 97.5% accuracy — model predicts the correct person from a face image
-                          - - **New concepts:** High-dimensional image data, face recognition, confusion matrix on 40 classes
-                            - - Metric reasoning: Precision as lead metric (criminal photo analysis use case); Macro F1 for balanced multi-class
-                             
-                              - ---
+- Real-world imbalanced dataset
+- **New concept:** `class_weight='balanced'` to handle skewed class distribution
+- Key learning: weighted vs macro F1; when imbalance changes your metric strategy
 
-                              ### Round 7 — 20 Newsgroups (Text Classification)
+---
 
-                              [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/07_fetch_20newsgroups.ipynb)
+### Round 6 — Olivetti Faces (Face Recognition)
 
-                              **Dataset:** `sklearn.datasets.fetch_20newsgroups`
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/06_olivetti_faces_recognition.ipynb)
 
-                              - 18,846 newsgroup posts across 20 topic categories
-                              - - Text classification: predict the newsgroup category from raw document text
-                                - - **New concepts:** TF-IDF vectorisation (`TfidfVectorizer`), sparse matrix features, text-as-features pipeline
-                                  - - Models compared: Logistic Regression vs Random Forest
-                                    - - ~72% accuracy (macro F1) — Logistic Regression wins on sparse text data
-                                      - - Key learning: text pipelines require a vectoriser step before scaling; sparse matrices behave differently from dense arrays
-                                       
-                                        - ---
+**Dataset:** `sklearn.datasets.fetch_olivetti_faces`
 
-                                        ### Round 8 — California Housing (Regression)
+- 400 grayscale face images, 40 people (10 images each)
+- 4096 features per image (64×64 pixels, flattened)
+- 97.5% accuracy — model predicts the correct person from a face image
+- **New concepts:** High-dimensional image data, face recognition, confusion matrix on 40 classes
+- Metric reasoning: Precision as lead metric (criminal photo analysis use case); Macro F1 for balanced multi-class
 
-                                        [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/08_fetch_california_housing.ipynb)
+---
 
-                                        **Dataset:** `sklearn.datasets.fetch_california_housing`
+### Round 7 — 20 Newsgroups (Text Classification)
 
-                                        - 20,000 California districts, 8 features (median income, house age, rooms, etc.)
-                                        - - **First regression task** — predicting continuous house prices
-                                          - - **New concepts:** Regression metrics (MAE, RMSE, R²), `LinearRegression`, `RandomForestRegressor`
-                                            - - Feature correlation analysis and multicollinearity exploration (heatmap)
-                                              - - Results — Linear Regression: R²=0.58, RMSE=0.75 → Random Forest: R²=0.82, RMSE=0.50 (42% more variance explained)
-                                                - - Key learning: R² measures explained variance; RMSE penalises large errors; tree-based models handle multicollinearity naturally
-                                                 
-                                                  - ---
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/07_fetch_20newsgroups.ipynb)
 
-                                                  ## ⚙️ General Workflow (All Rounds)
+**Dataset:** `sklearn.datasets.fetch_20newsgroups`
 
-                                                  ```
-                                                  Raw Data
-                                                  ↓
-                                                  Train / Test Split (stratified, 80/20)
-                                                  ↓
-                                                  StandardScaler (scale numeric/pixel features)
-                                                    or TfidfVectorizer (for text features)
-                                                  ↓
-                                                  Classifier or Regressor (Logistic Regression or Random Forest)
-                                                  ↓
-                                                  classification_report or regression metrics (MAE, RMSE, R²)
-                                                  ↓
-                                                  Confusion Matrix (visualise where errors occur)
-                                                  ↓
-                                                  Metric Reasoning (identify lead metric for the use case)
-                                                  ```
+- 18,846 newsgroup posts across 20 topic categories
+- Text classification: predict the newsgroup category from raw document text
+- **New concepts:** TF-IDF vectorisation (`TfidfVectorizer`), sparse matrix features, text-as-features pipeline
+- Models compared: Logistic Regression vs Random Forest
+- ~72% accuracy (macro F1) — Logistic Regression wins on sparse text data
+- Key learning: text pipelines require a vectoriser step before scaling; sparse matrices behave differently from dense arrays
 
-                                                  ---
+---
 
-                                                  ## 🔍 Metric Reasoning Framework
+### Round 8 — California Housing (Regression)
 
-                                                  A key skill built across these rounds — choosing the right lead metric is not mechanical, it requires reasoning from the use case:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SathyaPrakashD/ml-pipeline-fundamentals/blob/main/08_fetch_california_housing.ipynb)
 
-                                                  | Question | Why it matters |
-                                                  |---|---|
-                                                  | Is the data balanced or imbalanced? | Determines macro vs weighted F1 |
-                                                  | What is the cost of a False Positive? | Drives precision vs recall trade-off |
-                                                  | What is the cost of a False Negative? | Drives recall vs precision trade-off |
-                                                  | How many classes? | Determines averaging strategy |
-                                                  | Is the target continuous? | Use MAE / RMSE / R² instead of accuracy |
+**Dataset:** `sklearn.datasets.fetch_california_housing`
 
-                                                  **Example (Round 6 — Face Recognition for Criminal Identification):**
-                                                  - FP = innocent flagged as criminal → highest cost
-                                                  - - Legal principle: better a criminal go free than an innocent be convicted
-                                                    - - Lead metric: **Precision (Macro)** — penalises false accusations directly
-                                                     
-                                                      - **Example (Round 8 — Housing Price Prediction):**
-                                                      - - No false positives/negatives — target is continuous
-                                                        - - R² explains how much variance the model captures
-                                                          - - RMSE penalises large prediction errors more than MAE
-                                                            - - Lead metric: **R²** for model quality; **RMSE** for practical error magnitude
-                                                             
-                                                              - ---
+- 20,000 California districts, 8 features (median income, house age, rooms, etc.)
+- **First regression task** — predicting continuous house prices
+- **New concepts:** Regression metrics (MAE, RMSE, R²), `LinearRegression`, `RandomForestRegressor`
+- Feature correlation analysis and multicollinearity exploration (heatmap)
+- Results — Linear Regression: R²=0.58, RMSE=0.75 → Random Forest: R²=0.82, RMSE=0.50 (42% more variance explained)
+- Key learning: R² measures explained variance; RMSE penalises large errors; tree-based models handle multicollinearity naturally
 
-                                                              ## 🚀 How to Run
+---
 
-                                                              **Option 1 — Google Colab (recommended):** Click any "Open in Colab" badge above.
+## ⚙️ General Workflow (All Rounds)
 
-                                                              **Option 2 — Run locally:**
+```
+Raw Data
+↓
+Train / Test Split (stratified, 80/20)
+↓
+StandardScaler (scale numeric/pixel features)
+  or TfidfVectorizer (for text features)
+↓
+Classifier or Regressor (Logistic Regression or Random Forest)
+↓
+classification_report or regression metrics (MAE, RMSE, R²)
+↓
+Confusion Matrix (visualise where errors occur)
+↓
+Metric Reasoning (identify lead metric for the use case)
+```
 
-                                                              ```bash
-                                                              pip install -r requirements.txt
-                                                              jupyter notebook
-                                                              ```
+---
 
-                                                              ---
+## 🔍 Metric Reasoning Framework
 
-                                                              ## 📈 Results Summary
+A key skill built across these rounds — choosing the right lead metric is not mechanical, it requires reasoning from the use case:
 
-                                                              | Round | Dataset | Metric | Score | Key Challenge |
-                                                              |---|---|---|---|---|
-                                                              | 1 | Breast Cancer | Accuracy | ~96% | First pipeline |
-                                                              | 2 | Iris | Accuracy | ~97% | Full independence |
-                                                              | 3 | Wine (sklearn) | Accuracy | ~97% | Feature importance |
-                                                              | 4 | Digits | Accuracy | ~98% | Image-as-features |
-                                                              | 5 | Wine Quality | Weighted F1 | ~60–65% | Class imbalance |
-                                                              | 6 | Olivetti Faces | Accuracy | 97.5% | Image data, 40-class recognition |
-                                                              | 7 | 20 Newsgroups | Macro F1 | ~72% | Text features, 20-class classification |
-                                                              | 8 | California Housing | R² / RMSE | 0.82 / 0.50 | First regression task |
+| Question | Why it matters |
+|---|---|
+| Is the data balanced or imbalanced? | Determines macro vs weighted F1 |
+| What is the cost of a False Positive? | Drives precision vs recall trade-off |
+| What is the cost of a False Negative? | Drives recall vs precision trade-off |
+| How many classes? | Determines averaging strategy |
+| Is the target continuous? | Use MAE / RMSE / R² instead of accuracy |
 
-                                                              ---
+**Example (Round 6 — Face Recognition for Criminal Identification):**
 
-                                                              ## 🔑 Key Learnings
+- FP = innocent flagged as criminal → highest cost
+- Legal principle: better a criminal go free than an innocent be convicted
+- Lead metric: **Precision (Macro)** — penalises false accusations directly
 
-                                                              A `Pipeline` chains preprocessing and model training into one deployable object. `fit()` on training data. `predict()` on test data. The pipeline handles the rest.
+**Example (Round 8 — Housing Price Prediction):**
 
-                                                              Scale **after** splitting — never before. Scaling before the split leaks test statistics into training. This is one of the most common sources of data leakage in ML pipelines.
+- No false positives/negatives — target is continuous
+- R² explains how much variance the model captures
+- RMSE penalises large prediction errors more than MAE
+- Lead metric: **R²** for model quality; **RMSE** for practical error magnitude
 
-                                                              Simpler models can outperform complex ones on small, clean datasets. Logistic Regression consistently matched or beat Random Forest across these exercises — except on regression tasks where Random Forest shines.
+---
 
-                                                              Text data requires a vectoriser (`TfidfVectorizer`) as the first pipeline step — not a scaler. Sparse matrices are very different from dense numeric arrays.
+## 🚀 How to Run
 
-                                                              The right metric is decided by the **cost of being wrong** — not by convention. Classification uses accuracy/F1/precision/recall; regression uses MAE/RMSE/R².
+**Option 1 — Google Colab (recommended):** Click any "Open in Colab" badge above.
 
-                                                              ---
+**Option 2 — Run locally:**
 
-                                                              ## 🗺️ What's Next
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
 
-                                                              This exercise is a stepping stone toward:
+---
 
-                                                              - Custom preprocessors (`CustomPreprocessor`)
-                                                              - - Multi-column preprocessing with `ColumnTransformer`
-                                                                - - Text classification pipelines with `TfidfVectorizer` into deep learning
-                                                                  - - SciBERT fine-tuning for NLP classification
-                                                                    - - Production ML with Ray / Anyscale
-                                                                     
-                                                                      - ---
+## 📈 Results Summary
 
-                                                                      ## 👤 Author
+| Round | Dataset | Metric | Score | Key Challenge |
+|---|---|---|---|---|
+| 1 | Breast Cancer | Accuracy | ~96% | First pipeline |
+| 2 | Iris | Accuracy | ~97% | Full independence |
+| 3 | Wine (sklearn) | Accuracy | ~97% | Feature importance |
+| 4 | Digits | Accuracy | ~98% | Image-as-features |
+| 5 | Wine Quality | Weighted F1 | ~60–65% | Class imbalance |
+| 6 | Olivetti Faces | Accuracy | 97.5% | Image data, 40-class recognition |
+| 7 | 20 Newsgroups | Macro F1 | ~72% | Text features, 20-class classification |
+| 8 | California Housing | R² / RMSE | 0.82 / 0.50 | First regression task |
 
-                                                                      **Sathya Prakash** · [LinkedIn](https://www.linkedin.com/in/sathyaprakashd)
+---
 
-                                                                      Built as part of the **BITS Pilani Digital AI Engineering & MLOps Program** learning path.
+## 🔑 Key Learnings
 
-                                                                      ---
+A `Pipeline` chains preprocessing and model training into one deployable object. `fit()` on training data. `predict()` on test data. The pipeline handles the rest.
 
-                                                                      ## 📄 License
+Scale **after** splitting — never before. Scaling before the split leaks test statistics into training. This is one of the most common sources of data leakage in ML pipelines.
 
-                                                                      This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+Simpler models can outperform complex ones on small, clean datasets. Logistic Regression consistently matched or beat Random Forest across these exercises — except on regression tasks where Random Forest shines.
+
+Text data requires a vectoriser (`TfidfVectorizer`) as the first pipeline step — not a scaler. Sparse matrices are very different from dense numeric arrays.
+
+The right metric is decided by the **cost of being wrong** — not by convention. Classification uses accuracy/F1/precision/recall; regression uses MAE/RMSE/R².
+
+---
+
+## 🗺️ What's Next
+
+This exercise is a stepping stone toward:
+
+- Custom preprocessors (`CustomPreprocessor`)
+- Multi-column preprocessing with `ColumnTransformer`
+- Text classification pipelines with `TfidfVectorizer` into deep learning
+- SciBERT fine-tuning for NLP classification
+- Production ML with Ray / Anyscale
+
+---
+
+## 👤 Author
+
+**Sathya Prakash** · [LinkedIn](https://www.linkedin.com/in/sathyaprakashd)
+
+Built as part of the **BITS Pilani Digital AI Engineering & MLOps Program** learning path.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
